@@ -58,7 +58,7 @@ Shader "Custom/ShadowMapping/Receiver" {
 					{
 						float4 col = tex2D(_gShadowMapTexture, uv + float2(x, y) * _gShadowMapTexture_TexelSize.xy);
 						float sampleDepth = DecodeFloatRGBA(col);
-						shadow += sampleDepth < depth ? _gShadowStrength : 1;
+						shadow += sampleDepth < depth ? _gShadowStrength : 1;//接受物体片元的深度与深度图的值比较，大于则表示被挡住灯光，显示为阴影，否则显示自己的颜色（这里显示白色）
 					}
 				}
 				return shadow /= 9;
@@ -82,7 +82,7 @@ Shader "Custom/ShadowMapping/Receiver" {
 				// sample depth texture
 				/*float4 col = tex2D(_gShadowMapTexture, uv);
 				float sampleDepth = DecodeFloatRGBA(col);
-				float shadow = sampleDepth < depth ? _gShadowStrength : 1;
+				float shadow = sampleDepth < depth ? _gShadowStrength : 1;//接受物体片元的深度与深度图的值比较，大于则表示被挡住灯光，显示为阴影，否则显示自己的颜色（这里显示白色）
 				return shadow;*/
 			}
 
