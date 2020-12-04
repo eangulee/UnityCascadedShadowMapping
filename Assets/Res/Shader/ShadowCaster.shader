@@ -7,7 +7,7 @@
 // description: Generate a depth texture from the projector
 ///////////////////////////////////////////
 
-Shader "Kingsoft/CustomShadow/Caster" 
+Shader "Custom/ShadowMapping/Caster" 
 {
 	SubShader {
 		Tags { 			
@@ -41,14 +41,14 @@ Shader "Kingsoft/CustomShadow/Caster"
 			depth = 1 - depth;       //(1, 0)-->(0, 1)
 		#endif
 
-			//return EncodeFloatRGBA(depth);
-			return depth;
+			return EncodeFloatRGBA(depth);
+			//return depth;
 		}
 		ENDCG 
 
 		Pass {
 			Fog { Mode Off }
-			Cull front
+			Cull front//设置Cull front可解决面向光源的acne问题
 			
 			CGPROGRAM
 			#pragma vertex vert

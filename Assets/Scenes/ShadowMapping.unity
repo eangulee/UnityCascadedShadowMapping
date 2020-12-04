@@ -207,7 +207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170076733}
   m_LocalRotation: {x: 0.15609732, y: 0.2554171, z: -0.04182616, w: 0.9532294}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -7.66, y: 8.16, z: -13.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -328,10 +328,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 282840810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3ce10e86d995a04e80111c7b10748c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 611267bc71fc1b04689acdddaa4aa1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightTrans: {fileID: 170076735}
+  dirLight: {fileID: 170076734}
+  shadowResolution: 1
+  shadowCaster: {fileID: 4800000, guid: c4ff3959f725bb34aa2830163f0f976a, type: 3}
 --- !u!20 &282840813
 Camera:
   m_ObjectHideFlags: 0
@@ -425,7 +427,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d6113b09552145e49ab48a780a558321, type: 2}
+  - {fileID: 2100000, guid: c4ab73287d343fd4ba14c884955e61aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -462,8 +464,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664498840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.06, z: 38.3}
-  m_LocalScale: {x: 1, y: 1, z: 10}
+  m_LocalPosition: {x: 0, y: 0.06, z: 8.26}
+  m_LocalScale: {x: 3, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
